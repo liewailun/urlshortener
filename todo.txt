@@ -1,0 +1,4 @@
+- add tests
+- error treatments
+- add expiration date
+- docker compose

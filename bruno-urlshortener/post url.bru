@@ -1,0 +1,17 @@
+meta {
+  name: post url
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/shorten
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "urlString": "https://en.wikipedia.org/wiki/Spring_Boot"
+  }
+}
