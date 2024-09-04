@@ -32,12 +32,14 @@ public class UrlShortenerService {
             dbUrl = urlRepository.save(newUrl);
         }
 
-        //urlRepository.save();
         return dbUrl;
     }
 
     public String getShortenedLink(String code) {
         UrlModel dbUrl = urlRepository.findUrlModelByCode(code);
+
+        if(dbUrl == null)
+            return null;
 
         return dbUrl.getUrl();
     }
